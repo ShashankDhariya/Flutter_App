@@ -1,5 +1,17 @@
+class CatalogModels{
+  static final items = [
+    Item(
+      1, 
+      "Macbook Pro",
+      "Apple MacBook Pro with M1 chip",
+      999,
+      "Space Grey", 
+      "https://rukminim1.flixcart.com/image/832/832/khdqnbk0/computer/f/y/t/apple-original-imafxfyqydgvrkzv.jpeg?q=70",
+    )];
+}
+
 class Item{
-  final String id;
+  final int id;
   final String name;
   final String desc;
   final num price;
@@ -8,12 +20,3 @@ class Item{
 
   Item(this.id, this.name, this.desc, this.price, this.color, this.image); 
 }
-
-final products = [Item(
-  "Shashank001", 
-  "MacBookPro",
-  "Apple MacBook Pro with M1 chip",
-  151999,
-  "Space Grey", 
-  "https://s.yimg.com/os/creatr-uploaded-images/2020-12/d37e0460-3eeb-11eb-b7f9-449e864b9135",
-)];
