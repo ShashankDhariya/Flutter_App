@@ -9,58 +9,18 @@
         },
         {
             "id": 2,
-            "name": "iPhone 13",
-            "desc": "Apple iphone 13 8/256",
-            "price": 79999,
+            "name": "iPhone 12",
+            "desc": "Apple iphone 12 8/128",
+            "price": 49999,
             "color": "Black",
             "image": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664009482/Croma%20Assets/Communication/Mobiles/Images/243461_0_tzq0y4.png/mxw_2048,s_webp,f_auto"
         },
         {
             "id": 3,
-            "name": "iPhone 13",
-            "desc": "Apple iphone 13 8/256",
-            "price": 79999,
-            "color": "Black",
-            "image": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664009482/Croma%20Assets/Communication/Mobiles/Images/243461_0_tzq0y4.png/mxw_2048,s_webp,f_auto"
-        },
-        {
-            "id": 4,
-            "name": "iPhone 13",
-            "desc": "Apple iphone 13 8/256",
-            "price": 79999,
-            "color": "Black",
-            "image": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664009482/Croma%20Assets/Communication/Mobiles/Images/243461_0_tzq0y4.png/mxw_2048,s_webp,f_auto"
-        },
-        {
-            "id": 5,
-            "name": "iPhone 13",
-            "desc": "Apple iphone 13 8/256",
-            "price": 79999,
-            "color": "Black",
-            "image": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664009482/Croma%20Assets/Communication/Mobiles/Images/243461_0_tzq0y4.png/mxw_2048,s_webp,f_auto"
-        },
-        {
-            "id": 6,
-            "name": "iPhone 13",
-            "desc": "Apple iphone 13 8/256",
-            "price": 79999,
-            "color": "Black",
-            "image": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664009482/Croma%20Assets/Communication/Mobiles/Images/243461_0_tzq0y4.png/mxw_2048,s_webp,f_auto"
-        },
-        {
-            "id": 7,
-            "name": "iPhone 13",
-            "desc": "Apple iphone 13 8/256",
-            "price": 79999,
-            "color": "Black",
-            "image": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664009482/Croma%20Assets/Communication/Mobiles/Images/243461_0_tzq0y4.png/mxw_2048,s_webp,f_auto"
-        },
-        {
-            "id": 8,
-            "name": "iPhone 13",
-            "desc": "Apple iphone 13 8/256",
-            "price": 79999,
-            "color": "Black",
+            "name": "iPhone 14",
+            "desc": "Apple iphone 14 8/256",
+            "price": 89999,
+            "color": "JetBlack",
             "image": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664009482/Croma%20Assets/Communication/Mobiles/Images/243461_0_tzq0y4.png/mxw_2048,s_webp,f_auto"
         }
     ]

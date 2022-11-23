@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
           key: _formKey,
           child: Column(
             children: [
-              SizedBox(
+               const SizedBox(
                 height: 15,
               ),
               
@@ -43,13 +43,13 @@ class _LoginPageState extends State<LoginPage> {
               fit: BoxFit.cover ,
               ),
               
-              SizedBox(
+              const SizedBox(
                 height: 20.0, 
               ),
               
               Text(
                 "Welcome $name",
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   children: [
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: "Enter Username",
                         labelText: "Username",
                       ),
@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
               
                     TextFormField(
                       obscureText: true,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: "Enter Password",
                         labelText: "Password",
                       ),
@@ -93,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                       },
                     ),
               
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
         
@@ -108,11 +108,11 @@ class _LoginPageState extends State<LoginPage> {
                           height: 40,
                           alignment: Alignment.center,
                           child: changeButton? 
-                            Icon(
+                            const Icon(
                               Icons.done, 
                               color: Colors.white,
                               )
-                            : Text(
+                            : const Text(
                             "Login",
                             style: TextStyle(
                               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
