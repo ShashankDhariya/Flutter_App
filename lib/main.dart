@@ -1,4 +1,5 @@
 import 'package:first_app/pages/home.dart';
+import 'package:first_app/pages/home_details.dart';
 import 'package:first_app/pages/login.dart';
 import 'package:first_app/utils/routes.dart';
 import 'package:first_app/widgets/theme.dart';
