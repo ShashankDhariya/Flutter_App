@@ -1,11 +1,11 @@
 {
     "products": [{
             "id": 1,
-            "name": "iPhone 13",
-            "desc": "Apple iphone 13 8/256",
+            "name": "Girls Hostel",
+            "desc": "Graphic Era Girls Hostel",
             "price": 79999,
             "color": "Gold",
-            "image": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664009482/Croma%20Assets/Communication/Mobiles/Images/243461_0_tzq0y4.png/mxw_2048,s_webp,f_auto"
+            "image": "https://1.bp.blogspot.com/-Fobye---GbQ/VPNoQIC4lmI/AAAAAAAAARs/IH0V28EHIcQ/s1600/14210483962.JPG"
         },
         {
             "id": 2,
