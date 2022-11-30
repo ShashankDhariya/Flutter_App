@@ -1,10 +1,13 @@
 import 'dart:convert';
 import 'package:first_app/widgets/home_widgets/catalog_list.dart';
 import 'package:first_app/widgets/home_widgets/header.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../models/catalog.dart';
+import '../utils/routes.dart';
+import '../widgets/theme.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -34,7 +37,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: MyTheme.creamecolor,
+      backgroundColor: context.canvasColor,
+      floatingActionButton: FloatingActionButton(
+        onPressed:() => Navigator.pushNamed(context, MyRoutes.bookRoute),
+        child: Icon(CupertinoIcons.viewfinder_circle_fill),
+        ),
       body: SafeArea(
         child: Container(
           padding: Vx.m24,

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:first_app/models/catalog.dart';
 
+import '../utils/routes.dart';
+
 class HomeDetails extends StatelessWidget {
   final Item catalog;
   const HomeDetails({
@@ -12,7 +14,9 @@ class HomeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: Colors.white,
       bottomNavigationBar: ButtonBar(
         alignment: MainAxisAlignment.spaceBetween,
@@ -25,7 +29,10 @@ class HomeDetails extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all(Colors.redAccent), 
           shape: MaterialStateProperty.all(StadiumBorder())
           ),
-          child: "Book".text.xl.make()),
+          child: InkWell(
+            onTap: () => Navigator.pushNamed(context, MyRoutes.bookRoute),
+            child: "Book".text.xl.make())
+            ),
         ],
       ).p12().color(Colors.greenAccent),
       body: SafeArea(
@@ -39,11 +46,16 @@ class HomeDetails extends StatelessWidget {
               Expanded(
                 child: Container(
                   color: Colors.white,
-                  child: Column(
-                    children: [
-                      catalog.name.text.xl3.bold.make().p12(),
-                      catalog.desc.text.xl.textStyle(context.captionStyle).make(),
-                    ],
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        catalog.name.text.color(Color.fromARGB(197, 28, 57, 130)).xl4.bold.make().p12(),
+                        catalog.desc.text.xl.textStyle(context.captionStyle).make(),
+                        "Graphic Era Hostel located in the foothils of himalayas in Dehradun".text.center.make().py32().px12(),
+                        "Facilities".text.xl3.bold.make().px0(),
+                        // Image.network("")
+                      ],
+                    ),
                   ),
                 )
                 )

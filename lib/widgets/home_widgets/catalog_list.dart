@@ -1,5 +1,6 @@
 import 'package:first_app/models/catalog.dart';
 import 'package:first_app/pages/home_details.dart';
+import 'package:first_app/utils/routes.dart';
 import 'package:first_app/widgets/home_widgets/catalog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -50,8 +51,7 @@ class CatalogItem extends StatelessWidget {
                   children: [
                     "Rs.${catalog.price}".text.bold.lg.make(),
                     ElevatedButton(
-                      onPressed: (() {
-                      }), 
+                      onPressed:() => Navigator.pushNamed(context, MyRoutes.bookRoute),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(Colors.redAccent), 
                         shape: MaterialStateProperty.all(StadiumBorder())

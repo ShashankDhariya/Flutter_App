@@ -1,27 +1,28 @@
 {
     "products": [{
             "id": 1,
-            "name": "Girls Hostel",
-            "desc": "Graphic Era Girls Hostel",
-            "price": 79999,
-            "color": "Gold",
-            "image": "https://1.bp.blogspot.com/-Fobye---GbQ/VPNoQIC4lmI/AAAAAAAAARs/IH0V28EHIcQ/s1600/14210483962.JPG"
+            "name": "Sai Hostel",
+            "desc": "Graphic Era Hostel for Boys",
+            "price": 75999,
+            "color": "JetBlack",
+            "image": "https://images.jdmagicbox.com/comp/dehradun/x2/9999px135.x135.180816182320.s7x2/catalogue/graphic-era-subhash-nagar-dehradun-dehradun-hostels-xpyb15in4o.jpg?clr="
         },
         {
             "id": 2,
-            "name": "iPhone 12",
-            "desc": "Apple iphone 12 8/128",
-            "price": 49999,
+            "name": "SC Bose",
+            "desc": "Graphic Era Hostel for Boys",
+            "price": 89999,
             "color": "Black",
-            "image": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664009482/Croma%20Assets/Communication/Mobiles/Images/243461_0_tzq0y4.png/mxw_2048,s_webp,f_auto"
+
+            "image": "https://content.jdmagicbox.com/comp/dehradun/s4/9999px135.x135.191217202735.l1s4/catalogue/subhash-chandra-bose-hostel-dehradun-hostels-m2liqxo6m7-250.jpg"
         },
         {
             "id": 3,
-            "name": "iPhone 14",
-            "desc": "Apple iphone 14 8/256",
-            "price": 89999,
-            "color": "JetBlack",
-            "image": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664009482/Croma%20Assets/Communication/Mobiles/Images/243461_0_tzq0y4.png/mxw_2048,s_webp,f_auto"
+            "name": "Spire Girls Hostel",
+            "desc": "Graphic Era Hostel for Girls",
+            "price": 79999,
+            "color": "Gold",
+            "image": "https://1.bp.blogspot.com/-Fobye---GbQ/VPNoQIC4lmI/AAAAAAAAARs/IH0V28EHIcQ/s1600/14210483962.JPG"
         }
     ]
 }

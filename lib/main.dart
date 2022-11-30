@@ -1,5 +1,5 @@
+import 'package:first_app/pages/book.dart';
 import 'package:first_app/pages/home.dart';
-import 'package:first_app/pages/home_details.dart';
 import 'package:first_app/pages/login.dart';
 import 'package:first_app/utils/routes.dart';
 import 'package:first_app/widgets/theme.dart';
@@ -16,13 +16,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       
+      themeMode: ThemeMode.system,
       theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.homeRoute,
       routes: {
         "/" : (context) => const LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.bookRoute: (context) => BookHostel(),
       },
     );
   }

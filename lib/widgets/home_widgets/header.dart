@@ -10,8 +10,8 @@ class Header extends StatelessWidget {
     return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              "Graphic Era Hostel".text.xl3.bold.color(MyTheme.darkBlueish).make(),
-              "Transforming Dreams into Reality".text.make(),
+              "Graphic Era Hostel".text.xl3.bold.color(context.cardColor).make(),
+              "Transforming Dreams into Reality".text.color(context.primaryColor).make(),
             ],
           );
   }
