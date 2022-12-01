@@ -10,7 +10,7 @@ class MyTheme{
         appBarTheme: const AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
-          iconTheme: IconThemeData(color: Colors.black,),
+          iconTheme: IconThemeData(color: Colors.black),
           titleTextStyle: TextStyle(
             color: Colors.black,
             fontSize: 20.1,
@@ -24,11 +24,11 @@ class MyTheme{
         canvasColor: darkCreame,
         primaryColor: Colors.white,
         appBarTheme: const AppBarTheme(
-          color: Colors.black,
+          color: Colors.white,
           elevation: 0.0,
-          iconTheme: IconThemeData(color: Colors.black,),
+          iconTheme: IconThemeData(color: Colors.white),
           titleTextStyle: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 20.1,
             fontWeight: FontWeight.w500,
           ),

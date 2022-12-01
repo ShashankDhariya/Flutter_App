@@ -43,17 +43,20 @@ class _HomePageState extends State<HomePage> {
         child: Icon(CupertinoIcons.viewfinder_circle_fill),
         ),
       body: SafeArea(
-        child: Container(
-          padding: Vx.m24,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Header(),
-              if(CatalogModel.items.isNotEmpty)
-                CatalogList().expand().py12()
-              else  
-                CircularProgressIndicator().centered().expand(),
-            ],
+        child: SingleChildScrollView(
+          child: Container(
+            padding: Vx.m20,
+            child: 
+              Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Header(),
+                if(CatalogModel.items.isNotEmpty)
+                  CatalogList().expand().py12()
+                else  
+                  CircularProgressIndicator().centered().expand(),
+              ],
+            ),
           ),
         ),
       )

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:first_app/models/catalog.dart';
-
 import '../utils/routes.dart';
 
 class HomeDetails extends StatelessWidget {
@@ -15,9 +14,12 @@ class HomeDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        title: "Hostel Details...".text.make(),
+        backgroundColor: context.canvasColor,
+        iconTheme: IconThemeData(
+          color: context.primaryColor,
+        ),
       ),
-      backgroundColor: Colors.white,
       bottomNavigationBar: ButtonBar(
         alignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -34,7 +36,7 @@ class HomeDetails extends StatelessWidget {
             child: "Book".text.xl.make())
             ),
         ],
-      ).p12().color(Colors.greenAccent),
+      ).p8().color(Colors.greenAccent),
       body: SafeArea(
         bottom: false,
         child: Column(
@@ -42,18 +44,17 @@ class HomeDetails extends StatelessWidget {
             Hero(
               tag: Key(catalog.id.toString()),
               child: Image.network(catalog.image),
-              ).p2(),
+              ),
               Expanded(
                 child: Container(
-                  color: Colors.white,
+                  color: context.canvasColor,
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        catalog.name.text.color(Color.fromARGB(197, 28, 57, 130)).xl4.bold.make().p12(),
-                        catalog.desc.text.xl.textStyle(context.captionStyle).make(),
-                        "Graphic Era Hostel located in the foothils of himalayas in Dehradun".text.center.make().py32().px12(),
-                        "Facilities".text.xl3.bold.make().px0(),
-                        // Image.network("")
+                        catalog.name.text.color(context.primaryColor).xl4.bold.make().p12(),
+                        catalog.desc.text.lg.color(context.primaryColor).textStyle(context.captionStyle).make(),
+                        "Graphic Era Hostel located in the foothils of himalayas in Dehradun".text.color(context.primaryColor).center.make().py32().px12(),
+                        "Facilities".text.color(context.primaryColor).xl3.bold.make(),
                       ],
                     ),
                   ),
