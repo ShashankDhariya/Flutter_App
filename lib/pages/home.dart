@@ -7,7 +7,6 @@ import 'package:flutter/services.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../models/catalog.dart';
 import '../utils/routes.dart';
-import '../widgets/theme.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
