@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/cupertino.dart';
 
 class CatalogModel{
   static List<Item> items = [
@@ -10,6 +11,9 @@ class CatalogModel{
       color: "Space Grey", 
       image: "https://rukminim1.flixcart.com/image/832/832/khdqnbk0/computer/f/y/t/apple-original-imafxfyqydgvrkzv.jpeg?q=70",
     )];
+
+    Item getByID(int id) => 
+      items.firstWhere((element) => element.id == id, orElse: null);
 }
 
 class Item {

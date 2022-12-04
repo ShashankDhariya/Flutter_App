@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -37,6 +36,7 @@ class _Total extends StatelessWidget {
           30.widthBox,
           ElevatedButton(
             onPressed:() {
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "Not Supported yet".text.color(context.primaryColor).make()));
             }, 
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(
@@ -47,7 +47,7 @@ class _Total extends StatelessWidget {
               )
             ),
             child: "Pay".text.xl2.make(),
-            ).w24(context)
+            ).w24(context).py24()
         ],
       ).p16(),
     );
@@ -65,16 +65,22 @@ class _HostelPayState extends State<HostelPay> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 20,
+      itemCount: 1,
       itemBuilder:(context, index) => ListTile(
-        leading: Icon(Icons.done),
+        leading: Icon(
+          Icons.done,
+          color: context.primaryColor,
+          ),
         trailing: IconButton(
           onPressed:() {
             
           }, 
-          icon: Icon(Icons.remove_circle),
+          icon: Icon(
+            Icons.remove_circle,
+            color: context.primaryColor,
+            ),
           ),
-          title: "item".text.make(),
+          title: "item".text.color(context.primaryColor).make(),
       ),
       );
   }
