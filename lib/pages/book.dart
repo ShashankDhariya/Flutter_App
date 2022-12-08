@@ -1,3 +1,4 @@
+import 'package:first_app/models/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -25,14 +26,15 @@ class BookHostel extends StatelessWidget {
 
 class _Total extends StatelessWidget {
   const _Total({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
+    final _cart = CartModel();
     return SizedBox(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          "Rs${79999}".text.xl.color(context.primaryColor).make(),
+          "Rs. ${_cart.tatalPrice}".text.xl.color(context.primaryColor).make(),
           30.widthBox,
           ElevatedButton(
             onPressed:() {
@@ -62,10 +64,11 @@ class HostelPay extends StatefulWidget {
 }
 
 class _HostelPayState extends State<HostelPay> {
+  final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 1,
+      itemCount: _cart.items.length,
       itemBuilder:(context, index) => ListTile(
         leading: Icon(
           Icons.done,
@@ -80,7 +83,7 @@ class _HostelPayState extends State<HostelPay> {
             color: context.primaryColor,
             ),
           ),
-          title: "item".text.color(context.primaryColor).make(),
+          title: _cart.items[index].name.text.color(context.primaryColor).make(),
       ),
       );
   }
