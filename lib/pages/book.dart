@@ -56,14 +56,7 @@ class _Total extends StatelessWidget {
   }
 }
 
-class HostelPay extends StatefulWidget {
-  const HostelPay({super.key});
-
-  @override
-  State<HostelPay> createState() => _HostelPayState();
-}
-
-class _HostelPayState extends State<HostelPay> {
+class HostelPay extends StatelessWidget{
   final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
@@ -77,8 +70,7 @@ class _HostelPayState extends State<HostelPay> {
         trailing: IconButton(
           onPressed:() {
             _cart.remove(_cart.items[index]);
-            
-            setState(() {});
+            // setState(() {});
           }, 
           icon: Icon(
             Icons.remove_circle,
