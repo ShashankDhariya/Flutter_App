@@ -1,4 +1,5 @@
 import 'package:first_app/pages/book.dart';
+import 'package:first_app/widgets/home_widgets/addToCart.dart';
 import 'package:first_app/widgets/home_widgets/pics.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -26,17 +27,7 @@ class HomeDetails extends StatelessWidget {
         alignment: MainAxisAlignment.spaceBetween,
         children: [
           "Rs.${catalog.price}".text.bold.xl2.make(),
-          ElevatedButton(
-          onPressed: (() {
-          }), 
-          style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.redAccent), 
-          shape: MaterialStateProperty.all(StadiumBorder())
-          ),
-          child: InkWell(
-            onTap: () => Navigator.pushNamed(context, MyRoutes.bookRoute),
-            child: "Book".text.xl.make())
-            ),
+          AddToCart(catalog: catalog),
         ],
       ).p8().color(Colors.greenAccent),
       body: SafeArea(

@@ -67,7 +67,7 @@ class _HostelPayState extends State<HostelPay> {
   final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return _cart.items.isEmpty? "Nothing to show".text.xl.color(context.primaryColor).make().centered(): ListView.builder(
       itemCount: _cart.items.length,
       itemBuilder:(context, index) => ListTile(
         leading: Icon(
@@ -76,7 +76,9 @@ class _HostelPayState extends State<HostelPay> {
           ),
         trailing: IconButton(
           onPressed:() {
+            _cart.remove(_cart.items[index]);
             
+            setState(() {});
           }, 
           icon: Icon(
             Icons.remove_circle,
