@@ -1,3 +1,4 @@
+import 'package:first_app/core/store.dart';
 import 'package:first_app/models/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -29,7 +30,7 @@ class _Total extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    final _cart = CartModel();
+    final CartModel _cart = (VxState.store as MyStore).cart;
     return SizedBox(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -57,10 +58,13 @@ class _Total extends StatelessWidget {
 }
 
 class HostelPay extends StatelessWidget{
-  final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
-    return _cart.items.isEmpty? "Nothing to show".text.xl.color(context.primaryColor).make().centered(): ListView.builder(
+    VxState.watch(context, on: [AddMutation, RemoveMutation]);
+    final CartModel _cart = (VxState.store as MyStore).cart;
+    return _cart.items.isEmpty
+      ? "Nothing to show".text.xl.color(context.primaryColor).make().centered()
+      : ListView.builder(
       itemCount: _cart.items.length,
       itemBuilder:(context, index) => ListTile(
         leading: Icon(
@@ -68,17 +72,14 @@ class HostelPay extends StatelessWidget{
           color: context.primaryColor,
           ),
         trailing: IconButton(
-          onPressed:() {
-            _cart.remove(_cart.items[index]);
-            // setState(() {});
-          }, 
           icon: Icon(
             Icons.remove_circle,
             color: context.primaryColor,
             ),
+          onPressed:() => RemoveMutation(_cart.items[index]),
           ),
           title: _cart.items[index].name.text.color(context.primaryColor).make(),
       ),
-      );
+    );
   }
 }
