@@ -79,6 +79,7 @@ class HostelPay extends StatelessWidget{
           onPressed:() => RemoveMutation(_cart.items[index]),
           ),
           title: _cart.items[index].name.text.color(context.primaryColor).make(),
+          subtitle: _cart.items[index].rooms.text.make(),
       ),
     );
   }

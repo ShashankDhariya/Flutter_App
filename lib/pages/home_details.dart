@@ -48,6 +48,12 @@ class HomeDetails extends StatelessWidget {
                         catalog.name.text.color(context.cardColor).xl4.bold.make().centered().p12(),
                         catalog.desc.text.lg.color(context.primaryColor).textStyle(context.captionStyle).make().centered(),
                         "Graphic Era Hostel located in the foothils of himalayas in Dehradun".text.color(context.primaryColor).center.make().py32().px12(),
+                        Row(
+                          children: [
+                            "Rooms: ".text.white.make(),
+                            catalog.rooms.text.white.make(),
+                          ],
+                        ),
                         "Facilities: ".text.color(context.primaryColor).xl3.bold.make().p12(),
                         10.heightBox,
                         "24x7 Electricity and Water.".text.xl.color(context.primaryColor).align(TextAlign.left).make().p16(),

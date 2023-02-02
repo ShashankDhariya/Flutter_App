@@ -1,4 +1,5 @@
 import 'package:first_app/utils/routes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -37,7 +38,12 @@ class _LoginPageState extends State<LoginPage> {
             key: _formKey,
             child: Column(
               children: [
-                
+            
+                  FloatingActionButton(
+                    onPressed:() => Navigator.pushNamed(context, MyRoutes.overviewRoute),
+                    child: Icon(CupertinoIcons.back),
+                    backgroundColor: context.canvasColor,
+                    ).objectTopLeft(),
                 Image.asset("assets/images/login.png",
                 fit: BoxFit.cover ,
                 ),
@@ -45,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                 20.heightBox,
                 
                 Text(
-                  "Welcome $name",
+                  "Welcome back",
                   style: TextStyle(
                     color: context.primaryColor,
                     fontSize: 24,
@@ -60,11 +66,11 @@ class _LoginPageState extends State<LoginPage> {
                       TextFormField(
                         style: TextStyle(color: context.primaryColor),
                         decoration: InputDecoration(
-                          hintText: "Enter Username",
+                          hintText: "Enter Email",
                           hintStyle: TextStyle(
                             color: context.primaryColor
                           ),
-                          labelText: "Username",
+                          labelText: "Email",
                           labelStyle: TextStyle(
                             color: context.primaryColor
                             )
@@ -86,6 +92,9 @@ class _LoginPageState extends State<LoginPage> {
                         obscureText: true,
                         decoration: InputDecoration(
                           hintText: "Enter Password",
+                          hintStyle: TextStyle(
+                            color: context.primaryColor
+                          ),
                           labelText: "Password",
                           labelStyle: TextStyle(
                             color: context.primaryColor
@@ -102,9 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                         },
                       ),
                 
-                      const SizedBox(
-                        height: 15,
-                      ),
+                      15.heightBox,
           
                       Material(
                         color: Colors.deepPurple ,

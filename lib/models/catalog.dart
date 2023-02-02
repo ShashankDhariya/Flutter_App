@@ -7,7 +7,7 @@ class CatalogModel{
       name: "Macbook Pro",
       desc: "Apple MacBook Pro with M1 chip",
       price: 999,
-      color: "Space Grey", 
+      rooms: 100, 
       image: "https://rukminim1.flixcart.com/image/832/832/khdqnbk0/computer/f/y/t/apple-original-imafxfyqydgvrkzv.jpeg?q=70",
     )];
 
@@ -20,7 +20,7 @@ class Item {
   final String name;
   final String desc;
   final num price;
-  final String color;
+  final num rooms;
   final String image;
 
   Item({
@@ -28,7 +28,7 @@ class Item {
     required this.name,
     required this.desc,
     required this.price,
-    required this.color,
+    required this.rooms,
     required this.image,
   });
 
@@ -37,7 +37,7 @@ class Item {
     String? name,
     String? desc,
     num? price,
-    String? color,
+    num? rooms,
     String? image,
   }) {
     return Item(
@@ -45,7 +45,7 @@ class Item {
       name: name ?? this.name,
       desc: desc ?? this.desc,
       price: price ?? this.price,
-      color: color ?? this.color,
+      rooms : rooms ?? this.rooms,
       image: image ?? this.image,
     );
   }
@@ -56,7 +56,7 @@ class Item {
       'name': name,
       'desc': desc,
       'price': price,
-      'color': color,
+      'rooms': rooms,
       'image': image,
     };
   }
@@ -67,7 +67,7 @@ class Item {
       name: map['name'] as String,
       desc: map['desc'] as String,
       price: map['price'] as num,
-      color: map['color'] as String,
+      rooms: map['rooms'] as num,
       image: map['image'] as String,
     );
   }
@@ -78,7 +78,7 @@ class Item {
 
   @override
   String toString() {
-    return 'Item(id: $id, name: $name, desc: $desc, price: $price, color: $color, image: $image)';
+    return 'Item(id: $id, name: $name, desc: $desc, price: $price, rooms: $rooms, image: $image)';
   }
 
   @override
@@ -90,7 +90,7 @@ class Item {
       other.name == name &&
       other.desc == desc &&
       other.price == price &&
-      other.color == color &&
+      other.rooms == rooms &&
       other.image == image;
   }
 
@@ -100,7 +100,7 @@ class Item {
       name.hashCode ^
       desc.hashCode ^
       price.hashCode ^
-      color.hashCode ^
+      rooms.hashCode ^
       image.hashCode;
   }
 }
