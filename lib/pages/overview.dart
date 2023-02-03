@@ -12,19 +12,22 @@ class Overview extends StatelessWidget {
       body: 
           Center(
             child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset("assets/images/geu.png", fit: BoxFit.cover ,),
+                  // Image.asset("assets/images/geu.png", fit: BoxFit.cover ,),
+                  270.heightBox,
+                  "Book Your Hostel".text.bold.italic.xl4.blue100.make(),
+                  10.heightBox,
+                  "Graphic Era".text.xl2.underline.italic.red300.make(),
+                  20.heightBox,
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: context.canvasColor, // Background color
+                      primary: context.cardColor, // Background color
                     ),
                     onPressed:() => Navigator.pushNamed(context, MyRoutes.loginRoute),
-                    child: "".text.white.make(),
-                  ).objectTopRight(),
-                  90.heightBox,
-                  "Book Your Hostel".text.italic.xl4.white.make(),
-                  "Graphic Era".text.xl2.underline.red300.make(),
-                  150.heightBox,          
+                    child: "Login".text.white.xl2.make(),
+                  ),
+                  200.heightBox,
                   "Don't have account?".text.white.make(),
 
                   ElevatedButton(
@@ -32,7 +35,7 @@ class Overview extends StatelessWidget {
                       primary: context.canvasColor, // Background color
                     ),
                     onPressed:() => Navigator.pushNamed(context, MyRoutes.signinRoute),
-                    child: "Sign in".text.bold.underline.xl.make(),
+                    child: "Sign up".text.bold.underline.xl.make(),
                   ).objectBottomCenter()
                 ],
             ),

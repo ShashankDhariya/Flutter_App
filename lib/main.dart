@@ -11,11 +11,9 @@ import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 Future<void> main(List<String> args) async {
-  WidgetsFlutterBinding.ensureInitialized(
-    
-  );
-  // await Firebase.initializeApp();
-  runApp(VxState(store: MyStore(), child: MyApp()));
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(VxState(store: MyStore(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -30,11 +28,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.overviewRoute,
       routes: {
-        MyRoutes.homeRoute: (context) => HomePage(),
-        MyRoutes.loginRoute: (context) => LoginPage(),
-        MyRoutes.signinRoute: (context) => SignIn(),
-        MyRoutes.overviewRoute: (context) => Overview(),
-        MyRoutes.bookRoute: (context) => BookHostel(),
+        MyRoutes.homeRoute: (context) => const HomePage(),
+        MyRoutes.loginRoute: (context) => const LoginPage(),
+        MyRoutes.signinRoute: (context) => const SignIn(),
+        MyRoutes.overviewRoute: (context) => const Overview(),
+        MyRoutes.bookRoute: (context) => const BookHostel(),
       },
     );
   }

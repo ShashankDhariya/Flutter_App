@@ -1,47 +1,40 @@
 {
-  "project_info": {
-    "project_number": "309447652960",
-    "project_id": "hostelbooking-3671a",
-    "storage_bucket": "hostelbooking-3671a.appspot.com"
-  },
-  "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:309447652960:android:0f50df31091a962ed47505",
-        "android_client_info": {
-          "package_name": "com.example.first_app"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "309447652960-md58kfknfnnn2gu943to1imbre96m43u.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.first_app",
-            "certificate_hash": "0bf76263ff1b41671ee02ee975e53b8c6ba0bcf9"
-          }
-        },
-        {
-          "client_id": "309447652960-ehhfdvvu000ls821f557eenks7ldff85.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAA3ht_WEWEUE40NH0YBwjeuoCXIKGlmGY"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "309447652960-ehhfdvvu000ls821f557eenks7ldff85.apps.googleusercontent.com",
-              "client_type": 3
+    "project_info": {
+        "project_number": "309447652960",
+        "project_id": "hostelbooking-3671a",
+        "storage_bucket": "hostelbooking-3671a.appspot.com"
+    },
+    "client": [{
+        "client_info": {
+            "mobilesdk_app_id": "1:309447652960:android:2777104a140a4589d47505",
+            "android_client_info": {
+                "package_name": "com.example.first_app"
             }
-          ]
+        },
+        "oauth_client": [{
+                "client_id": "309447652960-md58kfknfnnn2gu943to1imbre96m43u.apps.googleusercontent.com",
+                "client_type": 1,
+                "android_info": {
+                    "package_name": "com.example.first_app",
+                    "certificate_hash": "0bf76263ff1b41671ee02ee975e53b8c6ba0bcf9"
+                }
+            },
+            {
+                "client_id": "309447652960-ehhfdvvu000ls821f557eenks7ldff85.apps.googleusercontent.com",
+                "client_type": 3
+            }
+        ],
+        "api_key": [{
+            "current_key": "AIzaSyAA3ht_WEWEUE40NH0YBwjeuoCXIKGlmGY"
+        }],
+        "services": {
+            "appinvite_service": {
+                "other_platform_oauth_client": [{
+                    "client_id": "309447652960-ehhfdvvu000ls821f557eenks7ldff85.apps.googleusercontent.com",
+                    "client_type": 3
+                }]
+            }
         }
-      }
-    }
-  ],
-  "configuration_version": "1"
+    }],
+    "configuration_version": "1"
 }

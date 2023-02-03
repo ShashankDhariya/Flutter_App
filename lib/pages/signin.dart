@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:first_app/utils/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -90,19 +91,22 @@ class SignIn extends StatelessWidget {
                         15.heightBox,
             
                         ElevatedButton(
-                          onPressed: () {
-                              if(email == '2011' && pass == '123456'){
+                          onPressed: () async {
+                              try {
+                                final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                                email: email,
+                                password: pass,
+                              );
                                 Navigator.pushNamed(context, MyRoutes.homeRoute);
+                                } on FirebaseAuthException catch (e) {
+                              if (e.code == 'weak-password') {
+                                print('The password provided is too weak.');
+                              } else if (e.code == 'email-already-in-use') {
+                              print('The account already exists for that email.');
                               }
-                              else if(pass != '123456' && email != '2011'){
-                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "Invalid Credentials".text.make()));
-                              }
-                              else if(email == '2011' && pass != '123456'){
-                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "Invalid Password".text.make()));
-                              }
-                              else {
-                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "Invalid Username".text.make()));
-                              }
+                              } catch (e) {
+                              print(e);
+                            }
                           }, 
                           child: "Sign in".text.make())
                       ],
