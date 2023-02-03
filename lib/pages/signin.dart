@@ -13,21 +13,20 @@ class SignIn extends StatelessWidget {
     String pass = '';
     return Scaffold(
       body: SafeArea(
-        child: Material(
-          color: context.canvasColor,
+        child: Container(
+          color: Colors.black26,
           child: SingleChildScrollView(
             child: Form(
               child: Column(
                 children: [
-
                   FloatingActionButton(
-                    onPressed:() => Navigator.pushNamed(context, MyRoutes.overviewRoute),
+                    onPressed:() => Navigator.pushNamed(context, MyRoutes.loginRoute),
                     child: Icon(CupertinoIcons.back),
                     backgroundColor: context.canvasColor,
                     ).objectTopLeft(),
-                  Image.asset("assets/images/login.png",
-                  fit: BoxFit.cover ,
-                  ),
+
+                  50.heightBox,
+                  Image.asset("assets/images/Register.png" ,width: 250),
                   
                   20.heightBox,
                   
@@ -37,55 +36,45 @@ class SignIn extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 22.0, horizontal: 30.0),
                     child: Column(
                       children: [
-                        TextFormField(
-                          onChanged:(value) {
-                            email = value;
-                          },
-                          style: TextStyle(color: context.primaryColor),
-                          decoration: InputDecoration(
-                            hintText: "Enter Email",
-                            hintStyle: TextStyle(
-                              color: context.primaryColor
-                            ),
-                            labelText: "Email",
-                            labelStyle: TextStyle(
-                              color: context.primaryColor
-                              )
+                        Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 1, color: Colors.white38),
+                            borderRadius: BorderRadius.circular(8)
                           ),
-                          validator: (value) {
-                            if(value!.isEmpty){
-                              return "Enter your Email id";
-                            }
-                            return null;
-                          },
+                          child: TextFormField(
+                            onChanged:(value) {
+                              email = value;
+                            },
+                            style: TextStyle(color: context.primaryColor),
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "Email",
+                              hintStyle: TextStyle(
+                                color: context.primaryColor
+                              ),
+                            ),
+                          ),
                         ),
                   
-                        TextFormField(
-                          onChanged:(value) {
-                            pass = value;
-                          },
-                          style: TextStyle(color: context.primaryColor),
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            hintText: "Enter Password",
-                            hintStyle: TextStyle(
-                              color: context.primaryColor
-                            ),
-                            labelText: "Password",
-                            labelStyle: TextStyle(
-                              color: context.primaryColor
-                              )
+                        Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 1, color: Colors.white38),
+                            borderRadius: BorderRadius.circular(8)
                           ),
-                          
-                          validator: (value){
-                            if(value!.isEmpty){
-                              return "Password cannot be empty";
-                            }
-                            if(value.length < 6){
-                              return "Password length should be more than 6";
-                            }
-                            return null;
-                          },
+                          child: TextFormField(
+                            onChanged:(value) {
+                              pass = value;
+                            },
+                            style: TextStyle(color: context.primaryColor),
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "Password",
+                              hintStyle: TextStyle(
+                                color: context.primaryColor
+                              ),
+                            ),
+                          ),
                         ),
                   
                         15.heightBox,
@@ -108,7 +97,8 @@ class SignIn extends StatelessWidget {
                               print(e);
                             }
                           }, 
-                          child: "Sign in".text.make())
+                          child: "Sign in".text.make()),
+                          100.heightBox,
                       ],
                     ),
                   ),

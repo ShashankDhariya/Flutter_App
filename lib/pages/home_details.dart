@@ -1,10 +1,8 @@
-import 'package:first_app/pages/book.dart';
 import 'package:first_app/widgets/home_widgets/addToCart.dart';
 import 'package:first_app/widgets/home_widgets/pics.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:first_app/models/catalog.dart';
-import '../utils/routes.dart';
 
 class HomeDetails extends StatelessWidget {
   final Item catalog;
@@ -17,7 +15,7 @@ class HomeDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: "Hostel Details...".text.make(),
+        title: '${catalog.name}'.text.make(),
         backgroundColor: context.canvasColor,
         iconTheme: IconThemeData(
           color: context.primaryColor,
@@ -36,7 +34,7 @@ class HomeDetails extends StatelessWidget {
           children: [
             Hero(
               tag: Key(catalog.id.toString()),
-              child: Image.network(catalog.image),
+              child: Image.network(catalog.image, height: 150,),
               ),
               Expanded(
                 child: Container(
@@ -45,7 +43,7 @@ class HomeDetails extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment:CrossAxisAlignment.start ,
                       children: [
-                        catalog.name.text.color(context.cardColor).xl4.bold.make().centered().p12(),
+                        10.heightBox,
                         catalog.desc.text.lg.color(context.primaryColor).textStyle(context.captionStyle).make().centered(),
                         "Graphic Era Hostel located in the foothils of himalayas in Dehradun".text.color(context.primaryColor).center.make().py32().px12(),
                         Row(

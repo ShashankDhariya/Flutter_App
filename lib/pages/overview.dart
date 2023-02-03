@@ -10,34 +10,36 @@ class Overview extends StatelessWidget {
     return Scaffold(
       backgroundColor: context.canvasColor,
       body: 
-          Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // Image.asset("assets/images/geu.png", fit: BoxFit.cover ,),
-                  270.heightBox,
-                  "Book Your Hostel".text.bold.italic.xl4.blue100.make(),
-                  10.heightBox,
-                  "Graphic Era".text.xl2.underline.italic.red300.make(),
-                  20.heightBox,
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: context.cardColor, // Background color
+          SingleChildScrollView (
+            child: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('assets/images/login.png'),
+                    270.heightBox,
+                    "Book Your Hostel".text.bold.italic.xl4.blue100.make(),
+                    10.heightBox,
+                    "Graphic Era".text.xl2.underline.italic.red300.make(),
+                    20.heightBox,
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: context.cardColor, // Background color
+                      ),
+                      onPressed:() => Navigator.pushNamed(context, MyRoutes.loginRoute),
+                      child: "Login".text.white.xl2.make(),
                     ),
-                    onPressed:() => Navigator.pushNamed(context, MyRoutes.loginRoute),
-                    child: "Login".text.white.xl2.make(),
-                  ),
-                  200.heightBox,
-                  "Don't have account?".text.white.make(),
-
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: context.canvasColor, // Background color
-                    ),
-                    onPressed:() => Navigator.pushNamed(context, MyRoutes.signinRoute),
-                    child: "Sign up".text.bold.underline.xl.make(),
-                  ).objectBottomCenter()
-                ],
+                    200.heightBox,
+                    "Don't have account?".text.white.make(),
+          
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: context.canvasColor, // Background color
+                      ),
+                      onPressed:() => Navigator.pushNamed(context, MyRoutes.signinRoute),
+                      child: "Sign up".text.bold.underline.xl.make(),
+                    ).objectBottomCenter()
+                  ],
+              ),
             ),
           ),
     );

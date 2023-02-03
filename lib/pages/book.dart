@@ -17,8 +17,8 @@ class BookHostel extends StatelessWidget {
       body: Column(
         children: [
           HostelPay().p32().expand(),
-          Divider(),
-          _Total(),
+          const Divider(),
+          const _Total(),
         ],
       ),
     );

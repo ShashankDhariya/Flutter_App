@@ -9,6 +9,12 @@ class Header extends StatelessWidget {
     return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              TextButton(
+                  onPressed:(){
+                    Navigator.pop(context);
+                  },
+                  child: "Signout".text.white.make(),
+                ).objectTopRight(),
               "Graphic Era Hostel".text.xl3.bold.color(context.cardColor).make(),
               "Transforming Dreams into Reality".text.color(context.primaryColor).make(),
             ],
