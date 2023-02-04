@@ -14,20 +14,6 @@ class _LoginPageState extends State<LoginPage> {
   String email = '';
   String pass = '';
   bool changeButton = false;
-  final _formKey = GlobalKey<FormState>();
-
-  moveToHome(BuildContext context) async{
-    if(_formKey.currentState!.validate()){
-      setState(() {
-        changeButton = true;
-      });
-      await Future.delayed(Duration(seconds: 1));
-      await Navigator.pushNamed(context, MyRoutes.homeRoute); 
-      setState(() {
-        changeButton = false;
-      });
-    }
-  }
 
   @override
   Widget build(BuildContext  context) {
@@ -90,7 +76,13 @@ class _LoginPageState extends State<LoginPage> {
                     15.heightBox,
           
                     ElevatedButton(
-                        onPressed: () async {
+                        onPressed: () async {   
+                            showDialog(
+                              context: context, 
+                              builder: (context){
+                                return const Center(child: CircularProgressIndicator());
+                              }
+                            );
                             try {
                               final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
                               email: email,
@@ -99,15 +91,21 @@ class _LoginPageState extends State<LoginPage> {
                               Navigator.pushNamed(context, MyRoutes.homeRoute);
                             } on FirebaseAuthException catch (e) {
                             if (e.code == 'user-not-found') {
-                              print('No user found for that email.');
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "No user found for that email".text.make()));
                             } else if (e.code == 'wrong-password') {
-                            print('Wrong password provided for that user.');
-                          }
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "Wrong password provided for that user".text.make()));
+                            }
+                            else if(email.isEmpty){
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "Email can't be empty".text.make()));
+                            }
+                            else if(pass.isEmpty){
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "Password can't be empty".text.make()));
+                            }
                         }
                         }, 
-                        child: "Login".text.make()
+                        child: "Login".text.make(),
                         ),
-      
+
                         30.heightBox,
                         "Don't have account?".text.white.make(),
       

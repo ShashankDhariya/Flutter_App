@@ -21,8 +21,8 @@ class SignIn extends StatelessWidget {
                 children: [
                   FloatingActionButton(
                     onPressed:() => Navigator.pushNamed(context, MyRoutes.loginRoute),
-                    child: Icon(CupertinoIcons.back),
                     backgroundColor: context.canvasColor,
+                    child: const Icon(CupertinoIcons.back),
                     ).objectTopLeft(),
 
                   50.heightBox,
@@ -81,23 +81,35 @@ class SignIn extends StatelessWidget {
             
                         ElevatedButton(
                           onPressed: () async {
+                              showDialog(
+                                context: context, 
+                                builder: (context){
+                                  return const Center(child: CircularProgressIndicator());
+                                }
+                              );
                               try {
                                 final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
                                 email: email,
                                 password: pass,
                               );
-                                Navigator.pushNamed(context, MyRoutes.homeRoute);
+                                Navigator.pushNamed(context, MyRoutes.loginRoute);
                                 } on FirebaseAuthException catch (e) {
                               if (e.code == 'weak-password') {
-                                print('The password provided is too weak.');
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "The password provided is too weak".text.make()));
                               } else if (e.code == 'email-already-in-use') {
-                              print('The account already exists for that email.');
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "The account already exists for that email".text.make()));
+                              }
+                              else if(email.isEmpty){
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "Email can't be empty".text.make()));
+                              }
+                              else if(pass.isEmpty){
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "Password can't be empty".text.make()));
                               }
                               } catch (e) {
                               print(e);
                             }
                           }, 
-                          child: "Sign in".text.make()),
+                          child: "Sign up".text.make()),
                           100.heightBox,
                       ],
                     ),

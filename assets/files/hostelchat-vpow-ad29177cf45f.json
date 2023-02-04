@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hostelchat-vpow",
+  "private_key_id": "ad29177cf45f8ad7dcac6b6ea5d3d27037fdbb68",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+bf8aa+hDMmbD\n//DvcPli6fxlsIzAnCZJrBa6yV47icFfUMvYbtbNcZxXL3kAQVMszzQrDwPveoQH\nOvV7keSpRUY5wSpgYAvursr+Detd/7TJdDjuYt1azSJuZB33/2niAuclYn3Y4UkF\nR+tzpDJPCSiLlQIXAnLpwxB5G3mDy3FAh/bkKMa63iE485aiyRAw672q1B6mgyn/\nmqUw2Umg3P0V59RVqYv05MrE3RTIhzPz7rVNcbn4DGVyNuKDAPPz8fjY+Dt+Kjtz\nT8BNbWUPssJwmox9o/We8GAws4NEtKDuuDVTtPOeW+NzPC/oQqgNNfFdGZhTuTai\nXUfZ5xI1AgMBAAECggEACf1vGQWpAeDH7jIuripaVD4rsPGrNKM3Hqgh6iB3FSmu\neg+ySJ3/SU2o6BRUD/dyrlgGvS00uuW4aEEHe0569TFZPt2QxE0NmzLSxd4Dkg3A\ngCKyJjlhXOqENaUtbaLvJ6hDft0qS8wnyUM4XtDx7bOwi5Vgg8YBCB06WkF0JWiE\nk2ALx3ThetZ+VL473qyLEsCXUMJS303X9/tHN+fGJ13yN7XyCLYM69FfUiFWaAvc\nJ0aS4MRCVLVTu11XLWJX3IMQ0QbepTm/TbITUp4R6l9eG1BHD9e1d1UyDiTGP/dm\n2U64hhagJng3IogvhBQvcoClZzEGtR6rj9lGehjpAQKBgQDeSL3gge00f1/GquSy\n0vFKavXjHqFR8eniS87TX7qUD24xdIA3AxdLHNQmb89kyjhJOjwTodKoBpB8MaH9\n3sJiCQIolr7rEbCzY8ScckzbifF+MYOq2eklMUfKotl3miq+iXxzNmpnHse9UNcG\nfE3ymLi6aZOVNt+WNEavVK+3NQKBgQDbUFnCVJtkyHX+08kDWkOyStjT7PezFn9o\n4ycsZwvBN4CcI1msGocP4K/NbYU6/O32EHILaM7cKSTCkxi76FfE1APDUhBV+4bZ\n+i63EVxTgYbhBvxx5zuDmd6dAxh7aa9blRAJtagNjJnBuArTY2DEXsuwsXU0QG65\nxq1HXLZPAQKBgGCYu+sUi0CFGdn76ebMRI9SbAiHBxPVTQ5KY1b4AtzU184mEpHV\nhgnePVN2w2nJdyxbYkAl0qWyNJfD+eGZLF/uCkIZQF5nEaLjeE2EXmIJUCjG27Ej\ngW3oPIqSum5/UJP8q1hmDVdCyQo8VzU6T6VdOOnJd5kgf4mGrjEDXFkBAoGBANZp\nT9e1b9awROvFkhg8/0In+qP2YJQtwpKAwaOfetaDtLDxvpGLvc/AEx/7mu14qgyP\nN3AAH30OnGm99ch/9o7v2F30tRPavJQPC+zehCz/zSXi9ptFPeIDZKiMhjrhsBcR\nPITBnHLiqs/BZpQT7F8PboRoefWDqLzniDDkazgBAoGAXnSxOWPJelnHk9SBLey2\n/yrHUjcOACfd9QPJpk00w9+97yyJeWZHvf6LHZ+w/IOxiASw99Qqkaml5sYTn1Ed\nQnw3Xqm9rNPd0DkSpp4O08tNowzZdaHJmSsXbKXstX3dkWeCAIj4zc3ycbwXYiBq\naO7cv76e1qAQBBarhvYr+GY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "chatbot@hostelchat-vpow.iam.gserviceaccount.com",
+  "client_id": "106182223456465061420",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/chatbot%40hostelchat-vpow.iam.gserviceaccount.com"
+}

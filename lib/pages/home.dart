@@ -41,6 +41,7 @@ class _HomePageState extends State<HomePage> {
         onPressed:() => Navigator.pushNamed(context, MyRoutes.bookRoute),
         child: Icon(CupertinoIcons.viewfinder_circle_fill),
         ),
+        
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(

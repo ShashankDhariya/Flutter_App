@@ -3,7 +3,6 @@ import 'package:first_app/core/store.dart';
 import 'package:first_app/pages/book.dart';
 import 'package:first_app/pages/home.dart';
 import 'package:first_app/pages/login.dart';
-import 'package:first_app/pages/overview.dart';
 import 'package:first_app/pages/signin.dart';
 import 'package:first_app/utils/routes.dart';
 import 'package:first_app/widgets/theme.dart';
@@ -31,7 +30,6 @@ class MyApp extends StatelessWidget {
         MyRoutes.homeRoute: (context) => const HomePage(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.signinRoute: (context) => const SignIn(),
-        MyRoutes.overviewRoute: (context) => const Overview(),
         MyRoutes.bookRoute: (context) => const BookHostel(),
       },
     );
